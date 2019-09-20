@@ -25,7 +25,7 @@ with open(csvpath, newline='') as csvfile:
 
     previous_month = int(row[1])
    
-   
+   #for loop through the data 
     for row in csvreader:
         total_months += 1
         total_revenue += int(row[1])
@@ -34,12 +34,15 @@ with open(csvpath, newline='') as csvfile:
         previous_month = int(row[1])
 
 
-
+    #round syntax - round(number, number of decimals)
     average_change = round(sum(intervals)/len(intervals), 2)
+    
+    #max and min show the floor and cieling of the array "intervals"
     greatest_increase = max(intervals)
     greatest_decrease = min(intervals)
     #figure out how to attach the dates to the greatest increase/decrease
 
+#print to the terminal - pay attention to indentation 
 print("Financial Analysis")
 print("-------------------")
 print(f"Total Months: {total_months}")
