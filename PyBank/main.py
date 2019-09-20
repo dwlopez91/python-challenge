@@ -45,8 +45,8 @@ print("-------------------")
 print(f"Total Months: {total_months}")
 print(f"Total Revenue: ${total_revenue}")
 print(f"Average Change: ${average_change}")
-print(greatest_decrease)
-print(greatest_increase)
+print(f"Greatest Decrease in Profits: ${greatest_decrease}")
+print(f"Greatest Increase in Profits: ${greatest_increase}")
 
 
 # # save the output file path
