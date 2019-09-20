@@ -36,13 +36,18 @@ with open(csvpath, newline='') as csvfile:
 
 
     average_change = round(sum(intervals)/len(intervals), 2)
-
+    greatest_increase = max(intervals)
+    greatest_decrease = min(intervals)
+    #figure out how to attach the dates to the greatest increase/decrease
 
 print("Financial Analysis")
 print("-------------------")
 print(f"Total Months: {total_months}")
 print(f"Total Revenue: ${total_revenue}")
 print(f"Average Change: ${average_change}")
+print(greatest_decrease)
+print(greatest_increase)
+
 
 # # save the output file path
 # output_path = os.path.join("..", "output", "new.csv")
