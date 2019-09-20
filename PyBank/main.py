@@ -28,7 +28,15 @@ with open(csvpath, newline='') as csvfile:
 
 
 
-
+print("Financial Analysis")
+print("-------------------")
 print(f"Total Months: {total_months}")
 print(f"Total Revenue: ${total_revenue}")
 
+output_path = os.path.join("..", "output", "new.csv")
+
+# Open the file using "write" mode. Specify the variable to hold the contents
+with open(output_path, 'w', newline='') as csvfile:
+
+    # Initialize csv.writer
+    csvwriter = csv.writer(csvfile, delimiter=',')
