@@ -52,11 +52,11 @@ print(f"Greatest Decrease in Profits: ${greatest_decrease}")
 print(f"Greatest Increase in Profits: ${greatest_increase}")
 
 
-# # save the output file path
-# output_path = os.path.join("..", "output", "new.csv")
+# save the output file path
+output_path = os.path.join("..", "output", "new.csv")
 
-# # Open the file using "write" mode. Specify the variable to hold the contents
-# with open(output_path, 'w', newline='') as csvfile:
+# Open the file using "write" mode. Specify the variable to hold the contents
+with open(output_path, 'w', newline='') as csvfile:
 
-#     # Initialize csv.writer
-#     csvwriter = csv.writer(csvfile, delimiter=',')
+    # Initialize csv.writer
+    csvwriter = csv.writer(csvfile, delimiter=',')
