@@ -3,7 +3,10 @@ import csv
 
 #intialize variables
 total_votes = 0
-candidate_list = []
+khan = 0
+# correy = candidate_list.count("Correy")
+# li = candidate_list.count("Li")
+# otooley = candidate_list.count("O'Tooley")
 
 # Set path for file
 csvpath = os.path.join('..', 'Resources', 'election_data.csv')
@@ -22,5 +25,8 @@ with open(csvpath, newline='') as csvfile:
 
     for row in csvreader:
         total_votes += 1
+        if(row[2] == "Khan"):
+            khan += 1
 
 print(total_votes)
+print(khan)
