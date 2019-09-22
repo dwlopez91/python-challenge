@@ -27,6 +27,8 @@ with open(csvpath, newline='') as csvfile:
         total_votes += 1
         if(row[2] == "Khan"):
             khan += 1
+khan_percent = round(khan/total_votes * 100)
 
 print(total_votes)
 print(khan)
+print(khan_percent)
