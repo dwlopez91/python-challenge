@@ -55,18 +55,11 @@ print(f"Li: {li_percent}% ({li})")
 print(f"O'Tooley: {otooley_percent}% ({otooley})")
 print("--------")
 
+output_file= os.path.join('..', 'output', 'new_poll.text')
 
-# Specify the file to write to
-output_path = os.path.join("..", "output", "new_poll.csv")
+# Open File Using "Write" Mode. Specify The Variable To Hold The Contents
+with open(output_file, 'w',) as txtfile:
 
-# Open the file using "write" mode. Specify the variable to hold the contents
-with open(output_path, 'w', newline='') as csvfile:
-
-    # Initialize csv.writer
-    csvwriter = csv.writer(csvfile, delimiter=',')
-
-    # Write the first row (column headers)
-    csvwriter.writerow(['First Name', 'Last Name', 'SSN'])
-
-    # Write the second row
-    csvwriter.writerow(['Caleb', 'Frost', '505-80-2901'])
+# Write New Data
+    txtfile.write(f"Election Results\n")
+    txtfile.write(f"---------------------------\n")
